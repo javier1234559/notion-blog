@@ -1,3 +1,5 @@
+// THIS FILE IS NOT USE ANYMORE . BUT IT GIVE AN EXAMPLE FOR USING ON REACT SERVER COMPONENT
+
 import "server-only"; //This line make sure that the file never get imported by the client to avoid leaking Notion Token.
 import { Client } from "@notionhq/client";
 import React from "react";
@@ -11,6 +13,7 @@ export const notion = new Client({
 });
 
 export const fetchPages = React.cache(() => {
+  console.log("check");
   return notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     filter: {

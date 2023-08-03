@@ -1,33 +1,12 @@
 const { Client } = require("@notionhq/client");
+import getPost, { Post } from '@/lib/getPost';
 import { fetchPages } from '@/lib/notion';
 // import { PageObjectResponse , QueryDatabaseResponse} from '@notionhq/client/build/src/api-endpoints';
 import Link from 'next/link';
 
 
-interface Post {
-  id: string;
-  title: string;
-  date: string;
-  description: string;
-  assign: string;
-  imageUrl: string;
-  slug: string;
-}
-
-
 export default async function Home() {
-  const data: any = await fetchPages();
-  // console.log("Post56 ", JSON.stringify(data.results[0].properties, null, 2));
-
-  const posts: Post[] = data.results.map((result: any) => ({
-    id: result.id,
-    title: result.properties.Title.title[0]?.plain_text ?? "",
-    date: result.properties.Date.date?.start ?? "No date",
-    assign: result.properties.Assign.people[0]?.name ?? "Unassigned",
-    description: result.properties.Description.rich_text[0]?.plain_text ?? "",
-    imageUrl: result.properties.Image.files[0]?.file.url ?? "", // Provide a default image URL if not available
-    slug: result.properties.Slug.rich_text[0]?.plain_text ?? "",
-  }));
+  const posts:Post[] = await getPost();
 
   return (
     <section className="bg-white dark:bg-gray-900">

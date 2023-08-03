@@ -2,6 +2,6 @@
 
 Todo list
 - [x] Fetch data from sdk notion
-- [ ] Test netlify function
-- [ ] Style text after encoding with tailwind 
+- [x] Test netlify function
+- [x] Style text after encoding with tailwind 
 - [ ] Style layout for blog

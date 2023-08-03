@@ -2,6 +2,7 @@
 
 
 .env
+.netlify
 
 # dependencies
 /node_modules
@@ -36,3 +37,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local Netlify folder
+.netlify
