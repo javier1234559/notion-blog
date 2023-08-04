@@ -1,7 +1,94 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
 
-body{
-    background-color: #0f172a;
+
+:root {
+    /* ---------------------- Background Colors ------------------*/
+    /* --bg-color: #fff; */
+    --bg-color: #242526;
+    --bg-color-0: hsla(44, 6%, 50%, .15);
+    --bg-color-1: #f7f6f3;
+    --bg-color-2: hsla(44, 6%, 50%, .15);
+    --bg-color-secondary: #0d0e10;
+    /* -------------------------  Select Colors: ------------------*/
+    --select-color-0: #7f5af0;
+    --select-color-1: #2cb67d;
+    --select-color-0: #2eaadc;
+    --select-color-1: rgba(45, 170, 219, .3);
+    --select-color-2: #d9eff8;
+    /* ---------------------- Foreground Colors -------------------*/
+    --fg-color: #f0ede6;
+    --fg-color-secondary: #dad7d2;
+    --fg-color-0: rgba(55, 53, 47, .09);
+    --fg-color-1: rgba(55, 53, 47, .16);
+    --fg-color-2: rgba(55, 53, 47, .4);
+    --fg-color-3: rgba(55, 53, 47, .6);
+    --fg-color-4: #000;
+    --fg-color-5: rgba(55, 53, 47, .024);
+    --fg-color-6: rgba(55, 53, 47, .8);
+    --fg-color-icon: var(--fg-color);
+    /* ---------------------- Basic Notion Colors ------------------*/
+    --notion-red: #e03e3e;
+    --notion-pink: #ad1a72;
+    --notion-blue: #0b6e99;
+    --notion-purple: #6940a5;
+    --notion-teal: #4d6461;
+    --notion-yellow: #dfab01;
+    --notion-orange: #d9730d;
+    --notion-brown: #64473a;
+    --notion-gray: #9b9a97;
+    /* ---------------------- Background Colors ------------------*/
+    --notion-red_background: #fbe4e4;
+    --notion-pink_background: #f4dfeb;
+    --notion-blue_background: #ddebf1;
+    --notion-purple_background: #eae4f2;
+    --notion-teal_background: #ddedea;
+    --notion-yellow_background: #fbf3db;
+    --notion-orange_background: #faebdd;
+    --notion-brown_background: #e9e5e3;
+    --notion-gray_background: #ebeced;
+    /* ---------------------- Notion Background Co (With Opacity): ------------------*/
+    --notion-red_background_co: hsla(0, 74%, 94%, .3);
+    --notion-pink_background_co: rgba(244, 223, 235, .3);
+    --notion-blue_background_co: rgba(221, 235, 241, .3);
+    --notion-purple_background_co: rgba(234, 228, 242, .3);
+    --notion-teal_background_co: rgba(221, 237, 234, .3);
+    --notion-yellow_background_co: hsla(45, 80%, 92%, .3);
+    --notion-orange_background_co: hsla(29, 74%, 92%, .3);
+    --notion-brown_background_co: hsla(20, 12%, 90%, .3);
+    --notion-gray_background_co: hsla(210, 5%, 93%, .3);
+    /* ---------------------- Notion Item Colors (With Opacity) ------------------*/
+    --notion-item-blue: rgba(0, 120, 223, .2);
+    --notion-item-orange: rgba(245, 93, 0, .2);
+    --notion-item-green: rgba(0, 135, 107, .2);
+    --notion-item-pink: rgba(221, 0, 129, .2);
+    --notion-item-brown: rgba(140, 46, 0, .2);
+    --notion-item-red: rgba(255, 0, 26, .2);
+}
+
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 30%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* Make it full height to enable vertical scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling when the content overflows */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
 }
