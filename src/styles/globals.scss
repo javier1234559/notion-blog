@@ -74,21 +74,21 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-.container {
-    display: flex;
-}
+// .container {
+//     display: flex;
+// }
 
-.sidebar {
-    width: 30%;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    /* Make it full height to enable vertical scrolling */
-    overflow-y: auto;
-    /* Enable vertical scrolling when the content overflows */
-}
+// .sidebar {
+//     width: 30%;
+//     position: sticky;
+//     top: 0;
+//     height: 100vh;
+//     /* Make it full height to enable vertical scrolling */
+//     overflow-y: auto;
+//     /* Enable vertical scrolling when the content overflows */
+// }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
+// .main-content {
+//     flex: 1;
+//     padding: 20px;
+// }
