@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -36,7 +39,6 @@ module.exports = {
               backgroundColor: '#2d2d2d',
               borderRadius: '3px',
               color: '#cccccc',
-              // fontFamily: 'Consolas, monospace',
               fontSize: '13.6px',
               lineHeight: '20.4px',
               margin: '6.8px 0px',
@@ -79,18 +81,18 @@ module.exports = {
           primary: "#7f5af0",
         },
       },
-      // fontFamily: {
-      //   ...fontFamily,
-      //   sans: ["Space Grotesk", "sans-serif"],
-      //   mono: ["Space Mono", "monospace"],
-      //   rubik: ["Rubik", "san-serif", "system-ui"],
-      // },
-      // minWidth: {
-      //   xs: "320px",
-      // },
-      // minHeight: {
-      //   64: "256px",
-      // },
+      fontFamily: {
+        ...fontFamily,
+        sans: ["var(--font-space_grotesk)"],
+        mono: ["var(--font-space_mono)"],
+        rubik: ["var(--font-rubik)"],
+      },
+      minWidth: {
+        xs: "320px",
+      },
+      minHeight: {
+        64: "256px",
+      },
     },
   },
   plugins: [

@@ -4,9 +4,9 @@ import React from 'react'
 
 // };
 
-function Nabar() {
+export default function Header() {
     return (
-        <header className="text-white fixed top-0 w-full h-[60px] flex flex-row content-center justify-around">
+        <header className="header">
             <div className='flex-grow py-2 px-10 flex flex-row justify-between items-center'>
                 <a href="/">
                     <h1 className='text-3xl'>WEEBUNS</h1>
@@ -29,5 +29,3 @@ function Nabar() {
         </header>
     )
 }
-
-export default Nabar

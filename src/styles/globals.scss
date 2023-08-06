@@ -4,91 +4,261 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
 
 
+// :root {
+//     /* ---------------------- Background Colors ------------------*/
+//     /* --bg-color: #fff; */
+//     --bg-color: #242526;
+//     --bg-color-0: hsla(44, 6%, 50%, .15);
+//     --bg-color-1: #f7f6f3;
+//     --bg-color-2: hsla(44, 6%, 50%, .15);
+//     --bg-color-secondary: #0d0e10;
+//     /* -------------------------  Select Colors: ------------------*/
+//     --select-color-0: #7f5af0;
+//     --select-color-1: #2cb67d;
+//     --select-color-0: #2eaadc;
+//     --select-color-1: rgba(45, 170, 219, .3);
+//     --select-color-2: #d9eff8;
+//     /* ---------------------- Foreground Colors -------------------*/
+//     --fg-color: #f0ede6;
+//     --fg-color-secondary: #dad7d2;
+//     --fg-color-0: rgba(55, 53, 47, .09);
+//     --fg-color-1: rgba(55, 53, 47, .16);
+//     --fg-color-2: rgba(55, 53, 47, .4);
+//     --fg-color-3: rgba(55, 53, 47, .6);
+//     --fg-color-4: #000;
+//     --fg-color-5: rgba(55, 53, 47, .024);
+//     --fg-color-6: rgba(55, 53, 47, .8);
+//     --fg-color-icon: var(--fg-color);
+//     /* ---------------------- Basic Notion Colors ------------------*/
+//     --notion-red: #e03e3e;
+//     --notion-pink: #ad1a72;
+//     --notion-blue: #0b6e99;
+//     --notion-purple: #6940a5;
+//     --notion-teal: #4d6461;
+//     --notion-yellow: #dfab01;
+//     --notion-orange: #d9730d;
+//     --notion-brown: #64473a;
+//     --notion-gray: #9b9a97;
+//     /* ---------------------- Background Colors ------------------*/
+//     --notion-red_background: #fbe4e4;
+//     --notion-pink_background: #f4dfeb;
+//     --notion-blue_background: #ddebf1;
+//     --notion-purple_background: #eae4f2;
+//     --notion-teal_background: #ddedea;
+//     --notion-yellow_background: #fbf3db;
+//     --notion-orange_background: #faebdd;
+//     --notion-brown_background: #e9e5e3;
+//     --notion-gray_background: #ebeced;
+//     /* ---------------------- Notion Background Co (With Opacity): ------------------*/
+//     --notion-red_background_co: hsla(0, 74%, 94%, .3);
+//     --notion-pink_background_co: rgba(244, 223, 235, .3);
+//     --notion-blue_background_co: rgba(221, 235, 241, .3);
+//     --notion-purple_background_co: rgba(234, 228, 242, .3);
+//     --notion-teal_background_co: rgba(221, 237, 234, .3);
+//     --notion-yellow_background_co: hsla(45, 80%, 92%, .3);
+//     --notion-orange_background_co: hsla(29, 74%, 92%, .3);
+//     --notion-brown_background_co: hsla(20, 12%, 90%, .3);
+//     --notion-gray_background_co: hsla(210, 5%, 93%, .3);
+//     /* ---------------------- Notion Item Colors (With Opacity) ------------------*/
+//     --notion-item-blue: rgba(0, 120, 223, .2);
+//     --notion-item-orange: rgba(245, 93, 0, .2);
+//     --notion-item-green: rgba(0, 135, 107, .2);
+//     --notion-item-pink: rgba(221, 0, 129, .2);
+//     --notion-item-brown: rgba(140, 46, 0, .2);
+//     --notion-item-red: rgba(255, 0, 26, .2);
+// }
+
 :root {
-    /* ---------------------- Background Colors ------------------*/
-    /* --bg-color: #fff; */
-    --bg-color: #242526;
-    --bg-color-0: hsla(44, 6%, 50%, .15);
-    --bg-color-1: #f7f6f3;
-    --bg-color-2: hsla(44, 6%, 50%, .15);
-    --bg-color-secondary: #0d0e10;
-    /* -------------------------  Select Colors: ------------------*/
-    --select-color-0: #7f5af0;
-    --select-color-1: #2cb67d;
-    --select-color-0: #2eaadc;
-    --select-color-1: rgba(45, 170, 219, .3);
-    --select-color-2: #d9eff8;
-    /* ---------------------- Foreground Colors -------------------*/
-    --fg-color: #f0ede6;
-    --fg-color-secondary: #dad7d2;
-    --fg-color-0: rgba(55, 53, 47, .09);
-    --fg-color-1: rgba(55, 53, 47, .16);
-    --fg-color-2: rgba(55, 53, 47, .4);
-    --fg-color-3: rgba(55, 53, 47, .6);
-    --fg-color-4: #000;
-    --fg-color-5: rgba(55, 53, 47, .024);
-    --fg-color-6: rgba(55, 53, 47, .8);
-    --fg-color-icon: var(--fg-color);
-    /* ---------------------- Basic Notion Colors ------------------*/
-    --notion-red: #e03e3e;
-    --notion-pink: #ad1a72;
-    --notion-blue: #0b6e99;
-    --notion-purple: #6940a5;
-    --notion-teal: #4d6461;
-    --notion-yellow: #dfab01;
-    --notion-orange: #d9730d;
-    --notion-brown: #64473a;
-    --notion-gray: #9b9a97;
-    /* ---------------------- Background Colors ------------------*/
-    --notion-red_background: #fbe4e4;
-    --notion-pink_background: #f4dfeb;
-    --notion-blue_background: #ddebf1;
-    --notion-purple_background: #eae4f2;
-    --notion-teal_background: #ddedea;
-    --notion-yellow_background: #fbf3db;
-    --notion-orange_background: #faebdd;
-    --notion-brown_background: #e9e5e3;
-    --notion-gray_background: #ebeced;
-    /* ---------------------- Notion Background Co (With Opacity): ------------------*/
-    --notion-red_background_co: hsla(0, 74%, 94%, .3);
-    --notion-pink_background_co: rgba(244, 223, 235, .3);
-    --notion-blue_background_co: rgba(221, 235, 241, .3);
-    --notion-purple_background_co: rgba(234, 228, 242, .3);
-    --notion-teal_background_co: rgba(221, 237, 234, .3);
-    --notion-yellow_background_co: hsla(45, 80%, 92%, .3);
-    --notion-orange_background_co: hsla(29, 74%, 92%, .3);
-    --notion-brown_background_co: hsla(20, 12%, 90%, .3);
-    --notion-gray_background_co: hsla(210, 5%, 93%, .3);
-    /* ---------------------- Notion Item Colors (With Opacity) ------------------*/
-    --notion-item-blue: rgba(0, 120, 223, .2);
-    --notion-item-orange: rgba(245, 93, 0, .2);
-    --notion-item-green: rgba(0, 135, 107, .2);
-    --notion-item-pink: rgba(221, 0, 129, .2);
-    --notion-item-brown: rgba(140, 46, 0, .2);
-    --notion-item-red: rgba(255, 0, 26, .2);
+    --fg-color: theme(colors.foreground.primary);
+    --fg-color-secondary: theme(colors.foreground.secondary);
+    --bg-color: theme(colors.background.primary);
+    --bg-color-secondary: theme(colors.background.secondary);
+    --select-color-0: theme(colors.accent.primary);
+    --select-color-1: theme(colors.accent.alternate);
+}
+
+.dark-mode {
+    --fg-color: theme(colors.background.primary);
+    --fg-color-secondary: theme(colors.background.secondary);
+    --bg-color: theme(colors.foreground.primary);
+    --bg-color-secondary: theme(colors.foreground.secondary);
+    --select-color-0: theme(colors.accent.secondary);
+    --select-color-1: theme(colors.accent.alternate);
 }
 
 
-body {
-    background-color: var(--bg-color);
-    font-family: 'Space Grotesk', sans-serif;
+@layer base {
+    html,
+    body {
+        --notion-font: theme(fontFamily.sans);
+        @apply scroll-smooth bg-background-primary text-foreground-secondary dark:bg-foreground-primary dark:text-background-secondary;
+    }
+
+    p,
+    li,
+    .notion-text {
+        @apply font-sans text-lg text-foreground-secondary dark:text-background-secondary md:text-lg;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .notion-h,
+    .notion-toggle > summary {
+        @apply font-sans font-normal text-foreground-secondary dark:text-background-secondary;
+    }
+
+    button,
+    aside {
+        @apply font-mono;
+    }
+
+    #__next > div > main {
+        padding-bottom: 2em !important;
+    }
 }
 
-// .container {
-//     display: flex;
-// }
+@layer components {
+    .header {
+        @apply fixed top-0 z-50 p-3;
+        @apply w-full bg-background-primary dark:bg-foreground-primary;
+    }
 
-// .sidebar {
-//     width: 30%;
-//     position: sticky;
-//     top: 0;
-//     height: 100vh;
-//     /* Make it full height to enable vertical scrolling */
-//     overflow-y: auto;
-//     /* Enable vertical scrolling when the content overflows */
-// }
+    .footer {
+        @apply w-full;
+        @apply flex flex-col items-center justify-evenly px-8 py-2 md:flex-row;
+    }
 
-// .main-content {
-//     flex: 1;
-//     padding: 20px;
-// }
+    .button-default {
+        @apply z-0 m-2 flex h-12 w-min cursor-pointer justify-center whitespace-nowrap rounded-md px-8 py-2.5 font-medium uppercase;
+        @apply border-2 border-background-secondary text-background-secondary;
+        @apply dark:text-background-primary;
+        @apply bg-accent-primary hover:bg-accent-alternate dark:bg-accent-secondary dark:hover:hover:bg-accent-alternate;
+    }
+
+    .button-round {
+        @apply mr-2 flex h-8 flex-row items-center self-center text-3xl md:text-4xl;
+        @apply group-hover:-rotate-45 group-hover:text-accent-primary  dark:group-hover:text-accent-secondary;
+        @apply transition-transform duration-300;
+    }
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.notion-page-content-has-aside {
+    @media (min-width: 1300px) {
+        width: calc((96vw + var(--notion-max-width)) / 2);
+    }
+}
+
+.notion-page-cover-wrapper,
+.notion-page-cover-wrapper span,
+.notion-page-cover-wrapper img {
+    max-width: 1200px !important;
+    border-radius: 0;
+
+    @media (min-width: 1300px) {
+        border-radius: 24px;
+    }
+}
+
+.notion-page-cover-wrapper {
+    width: 100% !important;
+    height: 30vh !important;
+    min-height: 30vh !important;
+    max-height: 30vh !important;
+    box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+}
+
+.notion-page-cover-wrapper img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.notion-title {
+    font-weight: 500;
+}
+
+.notion-table-of-contents-item {
+    font-size: 16px;
+    font-family: "Space Mono", "system-ui";
+    font-weight: 500;
+}
+
+.notion-link,
+.default-link {
+    position: relative;
+    transition: unset;
+    opacity: 1;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: dotted;
+    background: transparent;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 0 0.1rem;
+
+    &:focus,
+    &:hover {
+        color: var(--select-color-0);
+        border-bottom-color: transparent;
+        background-image: linear-gradient(
+            90.68deg,
+            var(--select-color-0) 0.26%,
+            var(--select-color-0) 102.37%
+        );
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 100% 0.1rem;
+
+        transition-property: background-position, background-size;
+        transition-duration: 300ms;
+    }
+}
+
+.notion-toggle > summary {
+    font-size: 22px;
+}
+
+.notion-quote {
+    font-size: 14px;
+    font-family: monospace;
+    font-style: italic;
+    border-left: 5px solid var(--select-color-0);
+    background-color: var(--notion-gray_background_co);
+    padding: 0.75em 1em;
+}
+
+.notion-bookmark {
+    padding: 1em;
+
+    .notion-bookmark-link {
+        font-family: monospace;
+    }
+
+    .notion-bookmark-title {
+        font-weight: 500;
+        font-family: "Space Mono", system-ui;
+        font-size: 1em;
+    }
+
+    &:focus,
+    &:hover {
+        border-bottom-color: transparent;
+        background-image: linear-gradient(
+            90.68deg,
+            var(--select-color-0) 0.26%,
+            var(--select-color-0) 102.37%
+        );
+        background-repeat: no-repeat;
+
+        transition-property: background-image;
+        transition-duration: 300ms;
+    }
+}

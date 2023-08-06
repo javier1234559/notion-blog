@@ -1,10 +1,8 @@
 import React from 'react'
 
-type Props = {}
-
-export default function Footer({ }: Props) {
+export default function Footer() {
     return (
-        <footer className='flex justify-between items-center'>
+        <footer className='footer flex justify-between items-center'>
             <a href="/">
                 <p className="font-rubik text-xl font-medium hidden md:block">WEEBUNS</p>
             </a>
