@@ -6,10 +6,11 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <header className="header">
+        <header className="header flex flex-col lg:flex-row ">
             <div className='flex-grow py-2 px-10 flex flex-row justify-between items-center'>
                 <a href="/">
-                    <h1 className='text-3xl'>WEEBUNS</h1>
+                    {/* <h1 className='text-[#ffa3e8] text-3xl'>WEEBUNS</h1> */}
+                    <h1 className="text-[var(--select-color-0)] text-3xl">WEEBUNS</h1>
                 </a>
                 <div>
                     DARK

@@ -1,5 +1,15 @@
+import { Category } from "@/lib/getPost";
+
 export interface PostDetail {
-    content: string;
+    title?: string;
+    description?: string;
+    date?: string;
+    author?:string;
+    image?: string;
+    slug:string;
+    timeToRead?:string;
+    category: Category[];
+    content?: string;
 }
 
 export default async function getPostDetail(slug: string): Promise<PostDetail> {
@@ -7,9 +17,17 @@ export default async function getPostDetail(slug: string): Promise<PostDetail> {
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    const data = await response.json();
-    const postDetail :PostDetail = {
-        content :data.content, 
+    const data:PostDetail = await response.json();
+    const postDetail: PostDetail = {
+        title: data.title,
+        description: data.description,
+        date: data.date,
+        author: data.author,
+        image: data.image,
+        slug: data.slug,
+        timeToRead: data.timeToRead,
+        category: data.category,
+        content: data.content,
     }
     return postDetail;
 }

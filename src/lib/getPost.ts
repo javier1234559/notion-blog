@@ -1,13 +1,19 @@
 export interface Post {
-    id: string;
-    title: string;
-    date: string;
-    description: string;
-    assign: string;
-    imageUrl: string;
+    id:string;
+    title?: string;
+    description?: string;
+    date?: string;
+    author?: string;
     slug: string;
+    timeToRead?: string;
+    category: Category[];
 }
 
+export interface Category {
+    id: string;
+    name: string;
+    color: string;
+}
 
 export default async function getPost(): Promise<Post[]> {
     const response = await fetch(`${process.env.URL}/.netlify/functions/getPostFunction`);
@@ -20,10 +26,11 @@ export default async function getPost(): Promise<Post[]> {
         id: result.id,
         title: result.properties.Title.title[0]?.plain_text ?? "",
         date: result.properties.Date.date?.start ?? "No date",
-        assign: result.properties.Assign.people[0]?.name ?? "Unassigned",
+        author: result.properties.Author.people[0]?.name ?? "Anonymous",
         description: result.properties.Description.rich_text[0]?.plain_text ?? "",
-        imageUrl: result.properties.Image.files[0]?.file.url ?? "", // Provide a default image URL if not available
         slug: result.properties.Slug.rich_text[0]?.plain_text ?? "",
+        timeToRead: result.properties.TimeToRead.rich_text[0]?.plain_text ?? "",
+        category: result.properties.Category.multi_select as Category[] ?? [],
     }));
 
     return posts;

@@ -1,22 +1,26 @@
 import BlogCard from "@/components/BlogCard";
 import getPost, { Post } from '@/lib/getPost';
+import Button from "@/components/Button";
 // import { PageObjectResponse , QueryDatabaseResponse} from '@notionhq/client/build/src/api-endpoints';
 
 export default async function Home() {
 
-  const posts:Post[] = await getPost();
+  const posts: Post[] = await getPost();
 
   return (
-    <section className="">
-      {/* <section className="bg-white dark:bg-gray-900"> //error */}
-      <div className="container px-6 py-10 mx-auto">
-        {/* <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1> */}
-        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-          {posts.map((post: Post) => (
-            <BlogCard key={post?.id} post={post}  />
-          ))}
-        </div>
+    <main className="container mx-auto p-4 justify-center flex flex-col lg:flex-row my-20">
+      <aside className="flex flex-col px-8 lg:basis-1/3">
+        <h1 className="text-5xl bold  ">My Blog</h1>
+        <span className="md:text-2xl my-4 max-w-2xl">Sharing ideas, theoretical topics, case studies, latest opensource tools and cloud native projects that I come across</span>
+        <Button href={"/"} variant="default"  >
+          Hello
+        </Button>
+      </aside>
+      <div className="flex flex-col items-stretch gap-4 lg:basis-2/3">
+        {posts.map((post: Post) => (
+          <BlogCard key={post?.id} post={post} />
+        ))}
       </div>
-    </section>
+    </main>
   );
-}   
+}

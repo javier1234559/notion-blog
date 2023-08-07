@@ -4,10 +4,11 @@ import { PropsWithChildren } from "react";
 type ButtonType = "default" | "round";
 
 type Props = PropsWithChildren<{
-    childrent: ReactNode,
+    children: ReactNode;
     href: URL | string;
     variant?: ButtonType;
 }>;
+
 
 function Button({
     children,

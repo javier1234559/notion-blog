@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
 
-
+// .d{
+//     DEFAULT: "hsl(180, 56%, 50%)",
+//     alternate: "hsl(130, 55%, 57%)",
+//     secondary: "hsl(54, 100%, 62%)",
+//     primary: "hsl(180, 56%, 50%)",
+// }
 // :root {
 //     /* ---------------------- Background Colors ------------------*/
 //     /* --bg-color: #fff; */
@@ -146,6 +150,23 @@
     }
 }
 
+.title-hover {
+    transition: color 300ms;
+    &:hover {
+        color: var(--select-color-0);
+
+    }
+}
+
+.spot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: gray; /* Adjust the color of the spot */
+    margin: 8px; /* Adjust the margin on both sides of the spot */
+    border-radius: 50%; /* Make the spot circular */
+}
+
 .vertical {
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -208,11 +229,9 @@
     &:hover {
         color: var(--select-color-0);
         border-bottom-color: transparent;
-        background-image: linear-gradient(
-            90.68deg,
-            var(--select-color-0) 0.26%,
-            var(--select-color-0) 102.37%
-        );
+        background-image: linear-gradient(90.68deg,
+                var(--select-color-0) 0.26%,
+                var(--select-color-0) 102.37%);
         background-repeat: no-repeat;
         background-position: 0 100%;
         background-size: 100% 0.1rem;
@@ -222,7 +241,7 @@
     }
 }
 
-.notion-toggle > summary {
+.notion-toggle>summary {
     font-size: 22px;
 }
 
@@ -251,11 +270,9 @@
     &:focus,
     &:hover {
         border-bottom-color: transparent;
-        background-image: linear-gradient(
-            90.68deg,
-            var(--select-color-0) 0.26%,
-            var(--select-color-0) 102.37%
-        );
+        background-image: linear-gradient(90.68deg,
+                var(--select-color-0) 0.26%,
+                var(--select-color-0) 102.37%);
         background-repeat: no-repeat;
 
         transition-property: background-image;

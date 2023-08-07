@@ -11,16 +11,17 @@ export default async function BlogCard({
 }: Props) {
 
   return (
-    <div className="lg:flex" >
-    <img className="object-cover w-full h-56 rounded-lg lg:w-64" src={post?.imageUrl} alt={`Image about ${post?.title}`} />
-
-    <div className="flex flex-col justify-between py-6 lg:mx-6">
-      <Link href={`blog/${post?.slug}`} className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-        {post?.title}
+    <div className="flex-col flex-1 justify-around pb-6 mb-4 border-b border-dashed hover:border-[var(--select-color-0)]" >
+      <Link href={`/${post.slug}`}><span className='text-[--select-color-0] text-medium text-green'># {post.slug}</span></Link>
+      <Link href={`blog/${post.slug}`}>
+        <h1 className='text-6xl mb-4 title-hover'>{post.title}</h1>
       </Link>
-      <span className="text-sm text-gray-500 dark:text-gray-300">By: {post?.assign}</span>
-      <span className="text-sm text-gray-500 dark:text-gray-300">On: {post?.date}</span>
+      <div className='flex flex-row'>
+        <span className='mr-4'>4/26/2022</span>
+        <span className='mr-4'>• </span>
+        <span className='mr-4'> ~ 5 min read</span>
+      </div>
+      <p className='text-gray-400 pt-4 py-4 font-light'>{post.description}</p>
     </div>
-  </div>
   )
 }

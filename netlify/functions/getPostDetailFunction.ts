@@ -26,9 +26,8 @@ const fetchPageBySlug = async (slug: string) => {
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
     try {
-        // Get the 'slug' parameter from the URL . REMEMBER TO WRITE CORRECT NAME OF "PARMAMETER" 
+        // Get the 'slug' parameter from the URL . REMEMBER TO WRITE CORRECT NAME OF "PARMAMETER"
         const slug: string | undefined = event.queryStringParameters?.slug; //.netlify/functions/getPostDetailFunction?slug=slug-1
-        console.log(slug);
         // Ensure 'slug' is provsluged in the request
         if (!slug) {
             return {

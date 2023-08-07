@@ -17,6 +17,7 @@ module.exports = {
         DEFAULT: {
           css: {
             color: '#dad7d2',
+            maxWidth: '100%',
             p: {
               fontSize: '18px',
               lineHeight: '28px',
@@ -75,10 +76,10 @@ module.exports = {
           primary: "#242526",
         },
         accent: {
-          DEFAULT: "#7f5af0",
-          alternate: "#2cb67d",
-          secondary: "#f25f4c",
-          primary: "#7f5af0",
+          DEFAULT: "hsl(180, 56%, 50%)",
+          alternate: "hsl(130, 55%, 67%)",
+          secondary: "hsl(54, 100%, 62%)",
+          primary: "hsl(180, 56%, 50%)",
         },
       },
       fontFamily: {
