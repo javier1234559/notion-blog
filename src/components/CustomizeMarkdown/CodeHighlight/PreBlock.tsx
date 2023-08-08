@@ -1,4 +1,4 @@
-import CodeHighlight from "@/components/CodeHighlight";
+import CodeHighlight from ".";
 import { ReactNode, isValidElement } from "react";
 
 interface PreBlockProps {

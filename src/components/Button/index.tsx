@@ -16,15 +16,15 @@ function Button({
     variant
 }: Props) {
     if (variant == "default") {
-        return (
-            <button>
-                <a
-                    href={href.toString()}
-                    className={`group button-default`}
-                >
-                    {children}
-                </a>
+        return (<a
+            href={href.toString()}
+            className={`group button-default`}
+        >
+            <button className=''>
+
+                {children}
             </button>
+        </a>
         );
     } else {
         return (

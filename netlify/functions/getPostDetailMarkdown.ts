@@ -2,7 +2,7 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { Client } from "@notionhq/client";
-import { PostDetail } from "@/lib/getPostDetail";
+import { PostDetail } from "@/types/Blogtype";
 import { NotionToMarkdown } from "notion-to-md";
 import { Category } from "@/lib/getPost";
 

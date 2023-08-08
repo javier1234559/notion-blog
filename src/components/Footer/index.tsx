@@ -6,7 +6,7 @@ export default function Footer() {
             <a href="/">
                 <p className="font-rubik text-xl font-medium hidden md:block">WEEBUNS</p>
             </a>
-            <div className="grid grid-flow-row grid-cols-6 max-w-sm mx-auto">
+            <div className="grid grid-flow-row grid-cols-5 max-w-sm mx-auto">
                 <a href="https://github.com/javier1234559/notion-blog" rel="noopener noreferrer nofollow" className="p-4" target="_blank" aria-label="github.com">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" role="img" viewBox="0 0 24 24" className="text-2xl hover:text-accent-primary dark:hover:text-accent-secondary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <title></title>
@@ -38,9 +38,9 @@ export default function Footer() {
                     </svg>
                 </a>
             </div>
-            <div className="flex flex-col text-sm font-sans text-foreground-secondary dark:text-background-secondary">
-                <span>Powered by Notion</span>
-                <span>Release: v3.0.2</span>
+            <div className="flex flex-col items-center lg:items-start text-sm font-sans text-foreground-secondary dark:text-background-secondary">
+                <span className='leading-8'>Powered by Notion</span>
+                <span className='leading-8'>Release: v3.0.2</span>
             </div>
         </footer>
     )

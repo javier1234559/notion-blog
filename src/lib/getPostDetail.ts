@@ -1,16 +1,5 @@
-import { Category } from "@/lib/getPost";
+import { PostDetail } from "@/types/Blogtype";
 
-export interface PostDetail {
-    title?: string;
-    description?: string;
-    date?: string;
-    author?:string;
-    image?: string;
-    slug:string;
-    timeToRead?:string;
-    category: Category[];
-    content?: string;
-}
 
 export default async function getPostDetail(slug: string): Promise<PostDetail> {
     const response = await fetch(`${process.env.URL}/.netlify/functions/getPostDetailMarkdown?slug=${slug}`);

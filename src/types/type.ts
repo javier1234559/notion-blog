@@ -1,6 +1,6 @@
 // import { BlogArticle, ITag, Project } from "./interface";
 // import { getCanonicalURL } from "./router";
-// import { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints";
+import { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints";
 // import { formatDate } from "react-notion-x";
 
 export type PostResult = Extract<

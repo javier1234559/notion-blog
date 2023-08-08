@@ -1,19 +1,4 @@
-export interface Post {
-    id:string;
-    title?: string;
-    description?: string;
-    date?: string;
-    author?: string;
-    slug: string;
-    timeToRead?: string;
-    category: Category[];
-}
-
-export interface Category {
-    id: string;
-    name: string;
-    color: string;
-}
+import { Post ,Category } from "@/types/Blogtype";
 
 export default async function getPost(): Promise<Post[]> {
     const response = await fetch(`${process.env.URL}/.netlify/functions/getPostFunction`);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Category } from '@/lib/getPost'
+import { Category } from '@/types/Blogtype'
 
 type Props = {
   category?: Category[];
@@ -15,22 +15,24 @@ export default function Title({
   description
 }: Props) {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center my-8 lg:my-0'>
       <div className='flex mb-4 text-gray-400 items-center'>
         {category?.map((tag) => (
-          <a
-            key={tag.id}
-            className={`mr-2 inline-block px-2 py-1 rounded text-xs ${tag.color // Use inline style for text color
+          <>
+            <span
+              key={tag.id}
+              className={`mr-2 inline-block px-2 py-1 rounded  hashtag-${tag.color // Use inline style for text color
               }`}
-          >
-            {tag.name}
-          </a>
+            >
+              {tag.name}
+            </span>
+            <span className='spot'></span>
+          </>
         ))}
-        <span className='spot'></span>
         <span>{date}</span>
       </div>
-      <h1 className='text-5xl font-semibold mb-4 '>{title}</h1>
-      <p className='p-4 text-gray-400 max-w-4xl text-center'>{description}</p>
+      <h1 className='text-3xl text-center lg:text-5xl font-semibold mb-4 '>{title}</h1>
+      <p className='p-4 text-gray-400 lg:max-w-4xl text-center'>{description}</p>
     </div>
   )
 }

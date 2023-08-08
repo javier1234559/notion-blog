@@ -137,7 +137,7 @@
     }
 
     .button-default {
-        @apply z-0 m-2 flex h-12 w-min cursor-pointer justify-center whitespace-nowrap rounded-md px-8 py-2.5 font-medium uppercase;
+        @apply z-0 flex h-12 w-min cursor-pointer justify-center whitespace-nowrap rounded-md px-8 py-2.5 font-medium uppercase;
         @apply border-2 border-background-secondary text-background-secondary;
         @apply dark:text-background-primary;
         @apply bg-accent-primary hover:bg-accent-alternate dark:bg-accent-secondary dark:hover:hover:bg-accent-alternate;
@@ -165,6 +165,42 @@
     background-color: gray; /* Adjust the color of the spot */
     margin: 8px; /* Adjust the margin on both sides of the spot */
     border-radius: 50%; /* Make the spot circular */
+}
+
+.hashtag {
+    &-default {
+        color: var(--select-color-0);
+    }
+    &-yellow {
+        color: hsl(54, 100%, 62%);
+    }
+    &-blue {
+        color: hsl(202, 78%, 66%);
+    }
+    &-green {
+        color: rgb(102, 236, 117);
+    }
+    &-red {
+        color: rgb(236, 102, 102);
+    }
+    &-pink {
+        color: rgb(236, 102, 180);
+    }
+    &-purple {
+        color: rgb(163, 102, 236);
+    }
+    &-gray {
+        color: rgb(169, 169, 169);
+    }
+    &-brown {
+        color: rgb(139, 69, 19);
+    }
+    &-lightgray {
+        color: rgb(211, 211, 211);
+    }
+    &-orange {
+        color: rgb(255, 177, 158);
+    }
 }
 
 .vertical {
