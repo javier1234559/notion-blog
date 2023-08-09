@@ -28,7 +28,7 @@ export default async function Page() {
                     </div>
                     <h2 className="text-2xl my-4">Weebuns</h2>
                     <p className="text-slate-500 text-base text-center">
-                    "Kiên trì trong học là chìa khóa mở ra cánh cửa của sự thành công. Những bước nhỏ hôm nay sẽ dẫn đến những thành tựu vĩ đại trong tương lai."
+                        &ldquo;Kiên trì trong học là chìa khóa mở ra cánh cửa của sự thành công. Những bước nhỏ hôm nay sẽ dẫn đến những thành tựu vĩ đại trong tương lai.&rdquo;
                     </p>
                 </div>
                 <div className=" lg:basis-2/3">
