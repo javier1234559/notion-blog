@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Shimmer from "@/components/Shimmer";
 
 export default async function Page() {
