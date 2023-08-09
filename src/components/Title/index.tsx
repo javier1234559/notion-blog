@@ -21,7 +21,7 @@ export default function Title({
           <>
             <span
               key={tag.id}
-              className={`mr-2 inline-block px-2 py-1 rounded  hashtag-${tag.color // Use inline style for text color
+              className={`mr-2 inline-block px-2 py-1 rounded dark:font-bold hashtag-${tag.color // Use inline style for text color
               }`}
             >
               {tag.name}
@@ -29,7 +29,7 @@ export default function Title({
             <span className='spot'></span>
           </>
         ))}
-        <span>{date}</span>
+        <span className='dark:text-background-secondary'>{date}</span>
       </div>
       <h1 className='text-3xl text-center lg:text-5xl font-semibold mb-4 '>{title}</h1>
       <p className='p-4 text-gray-400 lg:max-w-4xl text-center'>{description}</p>

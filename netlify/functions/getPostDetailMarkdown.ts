@@ -4,7 +4,7 @@ import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { Client } from "@notionhq/client";
 import { PostDetail } from "@/types/Blogtype";
 import { NotionToMarkdown } from "notion-to-md";
-import { Category } from "@/lib/getPost";
+import { Category } from "@/types/Blogtype";
 
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
@@ -72,7 +72,7 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
             };
         }
     } catch (error) {
-        console.error('Error in Netlify function:', error);
+        // console.error('Error in Netlify function:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: 'Internal server error' }),

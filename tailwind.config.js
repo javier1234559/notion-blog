@@ -36,6 +36,20 @@ module.exports = {
                 color: '#2c5282',
               },
             },
+            // table: {
+            //   borderRadius: "10px",
+            //   border :"1px solid grey",
+            //   overflow:"hidden"
+            // },
+            // thead: {
+            //   background: "grey",
+            // },
+            // th: {
+            //   paddingLeft:"2px"
+            // },
+            // td: {
+            //   paddingLeft:"2px"
+            // },
             // code: {
             //   backgroundColor: '#2d2d2d',
             //   borderRadius: '3px',
@@ -78,7 +92,7 @@ module.exports = {
         accent: {
           DEFAULT: "hsl(180, 56%, 50%)",
           alternate: "hsl(130, 55%, 67%)",
-          secondary: "hsl(54, 100%, 62%)",
+          secondary: "#f25f4c",
           primary: "hsl(180, 56%, 50%)",
         },
       },

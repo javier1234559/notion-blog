@@ -9,8 +9,10 @@ Todo list
 - [x] Add more time to Read and hashtag in title
 - [x] Fix reponsive sidebar and header
 - [x] Fix code block in markdown
-- [x] Code link hover custom
-- [ ] Code Change theme button
-- [ ] Code Error Page
-- [ ] Confige Image nextjs
-- [ ] About Page
+- [x] Code heading hover custom
+- [x] About Page
+- [x] Code Error Page
+- [x] Code Change theme button
+- [x] Confige Image nextjs
+- [x] Change header link
+- [ ] Deploy

@@ -79,6 +79,7 @@
     --bg-color-secondary: theme(colors.background.secondary);
     --select-color-0: theme(colors.accent.primary);
     --select-color-1: theme(colors.accent.alternate);
+    --select-color-2: theme(colors.accent.secondary);
 }
 
 .dark-mode {
@@ -88,6 +89,7 @@
     --bg-color-secondary: theme(colors.foreground.secondary);
     --select-color-0: theme(colors.accent.secondary);
     --select-color-1: theme(colors.accent.alternate);
+    --select-color-2: theme(colors.accent.primary);
 }
 
 
@@ -95,7 +97,7 @@
     html,
     body {
         --notion-font: theme(fontFamily.sans);
-        @apply scroll-smooth bg-background-primary text-foreground-secondary dark:bg-foreground-primary dark:text-background-secondary;
+        @apply scroll-smooth bg-background-primary text-foreground-secondary dark:bg-[#cecee6] dark:text-background-secondary;
     }
 
     p,
@@ -128,7 +130,7 @@
 @layer components {
     .header {
         @apply fixed top-0 z-50 p-3;
-        @apply w-full bg-background-primary dark:bg-foreground-primary;
+        @apply w-full bg-background-primary dark:bg-[#cecee6];
     }
 
     .footer {
@@ -148,7 +150,39 @@
         @apply group-hover:-rotate-45 group-hover:text-accent-primary  dark:group-hover:text-accent-secondary;
         @apply transition-transform duration-300;
     }
+    .table-custom{
+       margin: 0px;
+       padding: 20px;
+        th, td {
+            padding: 8px;
+            @apply  text-foreground-secondary dark:text-background-secondary
+        }
+        th {
+            background-color: grey;
+            font-weight: bold;
+        }
+
+    }
 }
+
+.swinging-hand {
+    width: 40px;
+    height: 40px;
+    animation: swing 4s infinite alternate ease-in-out;
+
+    @keyframes swing {
+        0% { transform: rotate( 0.0deg) }
+        10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+        20% { transform: rotate(-8.0deg) }
+        30% { transform: rotate(14.0deg) }
+        40% { transform: rotate(-4.0deg) }
+        50% { transform: rotate(10.0deg) }
+        60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+       100% { transform: rotate( 0.0deg) }
+    }
+  }
+
+
 
 .title-hover {
     transition: color 300ms;

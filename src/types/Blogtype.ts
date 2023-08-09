@@ -20,7 +20,7 @@ export interface PostDetail {
     description?: string;
     date?: string;
     author?:string;
-    image?: string;
+    image: string;
     slug:string;
     timeToRead?:string;
     category: Category[];
