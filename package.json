@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/functions": "^1.6.0",
+    "@netlify/plugin-nextjs": "^4.39.3",
     "@notionhq/client": "^2.2.9",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.4.5",
