@@ -8,12 +8,11 @@ import { getPostItem } from "@/lib/getPostItem";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   let post: IPostDetail;
-  post = await getPostItem(params.slug);
   try {
+    post = await getPostItem(params.slug);
   } catch (error) {
     notFound();
     // if (isNotFoundError(error)) {
-    //   console.log("0000000000000000000");
     // }
     // else {
     //   throw error;

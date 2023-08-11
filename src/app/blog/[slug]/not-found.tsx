@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { headers } from 'next/headers'
 import Button from '@/components/Button'
 
