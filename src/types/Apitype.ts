@@ -52,16 +52,15 @@ export const extractPosts = async (
     const posts: IPost[] = await Promise.all(
         databaseItems.map(async (postInDB: DatabaseItem) => {
 
-            const post: IPostDetail = {
+            const post: IPost = {
+                id :postInDB.id,
                 title: (postInDB.properties.Title.title as RichTextItemResponse[])[0]?.plain_text,
                 date: postInDB.properties.Date.date?.start ?? "No date",
                 author: (postInDB.properties.Author.people as any[])[0]?.name,
                 description: (postInDB.properties.Description.rich_text as RichTextItemResponse[])[0]?.plain_text,
-                image: (postInDB.properties.Image.files as any)[0]?.file.url,
                 slug: (postInDB.properties.Slug.rich_text as RichTextItemResponse[])[0]?.plain_text,
                 timeToRead: (postInDB.properties.TimeToRead.rich_text as RichTextItemResponse[])[0]?.plain_text,
                 category: (postInDB.properties.Category.multi_select as any) as ICategory[],
-                content: "No Content or Something error in netlify function",
             };
 
             return post;

@@ -26,7 +26,7 @@ export default async function Home() {
       </aside>
       <div className="flex flex-col items-stretch gap-4 lg:basis-2/3">
         {posts.map((post: IPost) => (
-          <BlogCard post={post} />
+          <BlogCard key={post.id} post={post} />
         ))}
       </div>
     </main>

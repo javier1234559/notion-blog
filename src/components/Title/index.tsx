@@ -1,8 +1,8 @@
 import React from 'react'
-import { Category } from '@/types/Blogtype'
+import { ICategory } from '@/types/Blogtype'
 
 type Props = {
-  category?: Category[];
+  category?: ICategory[];
   title?: string;
   date?: string;
   description?: string;

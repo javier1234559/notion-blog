@@ -8,7 +8,7 @@ function Paragragh({
     children
 }: Props) {
     return (
-        <p className='text-base lg:text-2xl leading-7 my-1 '>
+        <p className='text-base lg:text-xl leading-7 my-1 '>
             {children}
         </p>
     )
