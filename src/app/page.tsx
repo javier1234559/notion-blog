@@ -1,14 +1,14 @@
 import BlogCard from "@/components/BlogCard";
-import getPost from '@/lib/getPost';
 import Button from "@/components/Button";
-import { Post } from "@/types/Blogtype";
+import { IPost } from "@/types/Blogtype";
 import { notFound } from "next/navigation";
-// import { PageObjectResponse , QueryDatabaseResponse} from '@notionhq/client/build/src/api-endpoints';
+import { getListPost } from "@/lib/getListPost";
 
 export default async function Home() {
-  let posts :Post[] ;
+  let posts: IPost[];
+
   try {
-    posts= await getPost();
+    posts = await getListPost();
   } catch (error) {
     notFound();
   }
@@ -19,14 +19,14 @@ export default async function Home() {
         <h1 className="text-5xl lg:text-7xl bold lg:text-right text-center">Blog</h1>
         <p className="md:text-xl my-4 lg:max-w-sm text-center lg:text-start">
           Nơi bọn mình cùng học hỏi, chia sẻ kiến thức, và phát triển bản thân qua khoa học, tiếng Anh, lập trình và thói quen tích cực.
-          </p>
+        </p>
         <Button href={"/"} variant="default"  >
           Wellcome to Weebuns
         </Button>
       </aside>
       <div className="flex flex-col items-stretch gap-4 lg:basis-2/3">
-        {posts.map((post: Post) => (
-          <BlogCard key={post?.id} post={post} />
+        {posts.map((post: IPost) => (
+          <BlogCard post={post} />
         ))}
       </div>
     </main>

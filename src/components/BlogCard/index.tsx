@@ -1,8 +1,8 @@
-import { Post } from '@/types/Blogtype';
+import { IPost } from '@/types/Blogtype';
 import Link from 'next/link';
 
 type Props = {
-  post: Post;
+  post: IPost;
 }
 
 export default async function BlogCard({

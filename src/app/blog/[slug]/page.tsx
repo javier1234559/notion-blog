@@ -1,15 +1,15 @@
 import { notFound } from "next/navigation";
-import { PostDetail } from "@/types/Blogtype";
-import getPostDetail from "@/lib/getPostDetail";
+import { IPostDetail } from "@/types/Blogtype";
 import Title from "@/components/Title";
 import CustomizeMarkdown from "@/components/CustomizeMarkdown";
 import { isNotFoundError } from "next/dist/client/components/not-found";
 import Shimmer from "@/components/Shimmer";
+import { getPostItem } from "@/lib/getPostItem";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  let post: PostDetail;
+  let post: IPostDetail;
+  post = await getPostItem(params.slug);
   try {
-    post = await getPostDetail(params.slug);
   } catch (error) {
     notFound();
     // if (isNotFoundError(error)) {
@@ -26,15 +26,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="container flex flex-col lg-flex-row min-h-screen py-[100px] mb-10 p-4 text-sm ">
       <Title title={post.title} category={post.category} date={post.date} description={post.description} />
-      {/* <Image
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt={`Image of ${post.title}`}
-        placeholder='blur'
-        className="my-8 w-full object-contain max-h-[800px] "
-        src={post.image}
-        /> */}
       <Shimmer
         className="my-8 w-full object-contain max-h-[800px] "
         alt={`Image of ${post.title}`}

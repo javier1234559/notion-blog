@@ -1,21 +1,21 @@
-export interface Post {
-    id:string;
+export interface IPost {
+    // id:string;
     title?: string;
     description?: string;
     date?: string;
     author?: string;
     slug: string;
     timeToRead?: string;
-    category: Category[];
+    category: ICategory[];
 }
 
-export interface Category {
+export interface ICategory {
     id: string;
     name: string;
     color: string;
 }
 
-export interface PostDetail {
+export interface IPostDetail {
     title?: string;
     description?: string;
     date?: string;
@@ -23,6 +23,6 @@ export interface PostDetail {
     image: string;
     slug:string;
     timeToRead?:string;
-    category: Category[];
+    category: ICategory[];
     content?: string;
 }

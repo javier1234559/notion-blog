@@ -1,19 +1,18 @@
 // THIS FILE IS NOT USE ANYMORE . BUT IT GIVE AN EXAMPLE FOR USING ON REACT SERVER COMPONENT
-
-import "server-only"; //This line make sure that the file never get imported by the client to avoid leaking Notion Token.
+// import "server-only"; //This line make sure that the file never get imported by the client to avoid leaking Notion Token.
 import { Client } from "@notionhq/client";
 import React from "react";
 import {
   BlockObjectResponse,
   PageObjectResponse,
+  QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
 export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-export const fetchPages = React.cache(() => {
-  console.log("check");
+export const fetchPages = React.cache (() => {
   return notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     filter: {
