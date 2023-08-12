@@ -48,15 +48,16 @@ export const metadata: Metadata = {
     siteName: 'Notion Blog',
     images: [
       {
-        url: 'http://weebuns.social/og-book.jpg',
+        url: 'http://weebuns.social/og-cloudy.png',
         width: 800,
         height: 600,
+        alt: 'Open gragh of website Weebuns Blog',
       },
       {
-        url: 'http://weebuns.social/og-book.jpg',
+        url: 'http://weebuns.social/og-cloudy.png',
         width: 1800,
         height: 1600,
-        alt: 'My custom alt',
+        alt: 'Open gragh of website Weebuns Blog',
       },
     ],
     locale: 'vi_VN',

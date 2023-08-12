@@ -15,4 +15,9 @@ Todo list
 - [x] Code Change theme button
 - [x] Confige Image nextjs
 - [x] Change header link
-- [ ] Deploy
+- [x] Fix bug next13 not working in netlify
+- [x] Fix bug limit deloy
+- [x] Deploy
+- [x] Add search page
+- [x] Optimize SEO basic
+- [ ] Add pagination component
