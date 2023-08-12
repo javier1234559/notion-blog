@@ -11,6 +11,12 @@ export async function getListPost(): Promise<IPost[]> {
     const databaseId = process.env.NOTION_DATABASE_ID || "";
     const response: QueryDatabaseResponse = await notion.databases.query({
         database_id: databaseId,
+        filter: {
+            property: "Status",
+            status: {
+                equals: "Published",
+            },
+        },
     });
     const posts = await extractPosts(response);
     return posts;
