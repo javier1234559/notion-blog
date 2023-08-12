@@ -26,7 +26,7 @@ export default async function Header() {
                 <a href="/">
                     <li className='hover:text-accent dark:hover:text-accent-secondary mx-2 uppercase font-mono text-sm sm:text-lg font-medium'>Trang Chủ</li>
                 </a>
-                <a href="/">
+                <a href="/blog">
                     <li className='hover:text-accent dark:hover:text-accent-secondary mx-2 uppercase font-mono text-sm sm:text-lg font-medium'>BLOG</li>
                 </a>
                 <a href="/about">

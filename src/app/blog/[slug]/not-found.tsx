@@ -1,5 +1,13 @@
 import { headers } from 'next/headers'
 import Button from '@/components/Button'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'Not Found',
+  description: "The page is not found"
+}
+
 
 export default async function NotFound() {
   const headersList = headers()

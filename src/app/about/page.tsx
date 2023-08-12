@@ -1,4 +1,20 @@
 import Shimmer from "@/components/Shimmer";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: {
+        absolute: `About Page`
+    },
+    description: "Tại đây, bọn mình tạo ra một không gian đầy kết nối, nơi mọi cá nhân có thể cùng nhau học hỏi, chia sẻ và phát triển. Không chỉ là nơi trao đổi kiến thức, trang web này còn thúc đẩy sự nâng cao bản thân thông qua việc chia sẻ ý tưởng, kỹ năng và thói quen tích cực.",
+    alternates: {
+        canonical: `/blog/about`,
+        languages: {
+            "vi-VN": `vi-VN/blog/about`,
+        }
+    }
+}
+
 
 export default async function Page() {
 
