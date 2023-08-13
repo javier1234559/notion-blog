@@ -20,4 +20,5 @@ Todo list
 - [x] Deploy
 - [x] Add search page
 - [x] Optimize SEO basic
+- [ ] Add All Category List
 - [ ] Add pagination component

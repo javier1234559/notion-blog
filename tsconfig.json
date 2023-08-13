@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/styles/CustomizeMarkdown/CodeHighlight/index.js", "src/styles/CustomizeMarkdown/CodeHighlight/CodeBlock.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/styles/CustomizeMarkdown/CodeHighlight/index.js", "src/styles/CustomizeMarkdown/CodeHighlight/CodeBlock.jsx", "src/lib/gtagHelper.js"],
   "exclude": ["node_modules"]
 }
